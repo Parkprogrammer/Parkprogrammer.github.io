@@ -128,7 +128,16 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
-
+sidebar:
+  - title: "Skills"
+    # image: # http://placehold.it/350x250
+    # image_alt: "image"
+    text: "Java / C / C++ / Python / Git / Tensorflow"
+  - title: "Education"
+    text: "~2018 High School | ~2023 SungKyunKwan University |"
+  - title: "Major"
+    text: "Computer Science"
+    
 # Site Footer
 footer:
   links:
