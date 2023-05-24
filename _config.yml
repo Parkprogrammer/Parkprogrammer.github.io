@@ -104,12 +104,12 @@ analytics:
 
 # Site Author
 author:
-  name             : "Je-Hyun Park"
+  name             : "Parkprogrammer"
   avatar           : "/assets/image/dpbear.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "**Keep Going**"
   location         : "SungKyunKwan University"
+  "This is a test"
   email            : "jaheon555@g.skku.edu"
-  bio              : "Skills"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
