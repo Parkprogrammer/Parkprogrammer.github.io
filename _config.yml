@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Parkprogrammer"
   avatar           : "/assets/image/dpbear.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "**Keep Going**<br/>Skills : Java / C / C++ / Python / Git / Tensorflow<br/>Major : Computer Science<br/>Education : Sungkyunkwan Univ undergraduate<br/>Achievments : Industry-University Cooperation Project (~23)"
+  bio              : "**Keep Going**<br/>**Skills**<br/>Java / C / C++ / Python / Git / Tensorflow<br/>**Major**<br/>Computer Science<br/>**Education<br/>Sungkyunkwan Univ undergraduate<br/>**Achievments**<br/>Industry-University Cooperation Project (~23)"
   location         : "SungKyunKwan University"
   email            : "jaheon555@g.skku.edu"
   links:
