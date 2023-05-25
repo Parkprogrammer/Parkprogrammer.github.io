@@ -130,14 +130,7 @@ author:
       # url: "https://instagram.com/"
 auto_profile: true
 sidebar:
-  - title: "Skills"
-    # image: # http://placehold.it/350x250
-    # image_alt: "image"
-    text: "Java / C / C++ / Python / Git / Tensorflow"
-  - title: "Education"
-    text: "~2018 High School | ~2023 SungKyunKwan University |"
-  - title: "Major"
-    text: "Computer Science"
+  nav: "sidebar-category"
     
 # Site Footer
 footer:
