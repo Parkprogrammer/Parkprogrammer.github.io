@@ -1,6 +1,6 @@
 ---
 title: "Skills"
-bio : "C / C++ / JAVA / Python / Tensorflow"
+excerpt: "C / C++ / JAVA / Python / Tensorflow"
 layout: archive
 permalink: /skills
 
