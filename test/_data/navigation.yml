@@ -6,8 +6,8 @@ main:
     url: /year-archive/
   - title: "Collections"
     url: /collection-archive/
-  - title: "Sitemap"
-    url: /sitemap/
+  #- title: "Sitemap"
+  #  url: /sitemap/
   - title: "Extra Menu Item 1"
     url: /
   - title: "Extra Menu Item 2"
