@@ -10,3 +10,13 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+ 
+sidebar-category:
+  - title: "카테고리"
+    children:
+      - title: "Skills"
+        url: "/skills"
+      - title: "Education"
+        url:  "/education"
+      - title: "Achievements"
+        url:  "/achievements" 
