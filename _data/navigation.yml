@@ -3,7 +3,7 @@ main:
   - title: "Quick-Start Guide"
     url: https://Parkprogrammer.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "About"
-    url: /docs/_pages/about.md
+    url: /docs/_pages/about
   - title: "Sample Posts"
     url: /year-archive/
   # - title: "Sample Collections"
@@ -12,11 +12,11 @@ main:
   #   url: /sitemap/
  
 sidebar-category:
-  - title: "카테고리"
+  - title: "About Me"
     children:
+      - title: "Introduction"
+        url:  "/introduction"
       - title: "Skills"
         url: "/skills"
-      - title: "Education"
-        url:  "/education"
       - title: "Achievements"
-        url:  "/achievements" 
+        url:  "/achievements"
