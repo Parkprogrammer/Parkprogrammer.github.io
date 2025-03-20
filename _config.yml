@@ -14,19 +14,16 @@
 # remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
-# Site Settings
-locale                   : "en-US"
-title                    : "Parkprogrammer's blog"
-title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Je-Hyun Park"
-description              : "An amazing website."
-url                      : "https://Parkprogrammer.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png" 
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+# 사이트 설정
+title: "Jehyun Park"
+subtitle: # 서브타이틀 제거
+name: "Jehyun Park"
+description: "Machine Learning Researcher & Computer Science Engineer"
+url: "https://Parkprogrammer.github.io"
+repository: # GitHub 사용자명/저장소명
+logo: # 로고 이미지 경로 (선택사항)
+masthead_title: # 헤더에 표시될 제목 (비워두면 site.title 사용)
+
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -104,30 +101,19 @@ analytics:
 
 # Site Author
 author:
-  name             : "Parkprogrammer"
-  avatar           : "/assets/image/dpbear.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "**Keep Going**<br/>**Skills**<br/>Java / C / C++ / Python / Git / Tensorflow<br/><br/>**Major**<br/>Computer Science<br/><br/>**Education**<br/>Sungkyunkwan Univ undergraduate<br/><br/>**Achievments**<br/>Industry-University Cooperation Project (~23)"
-  location         : "SungKyunKwan University"
+  name             : "Jehyun Park"
+  avatar           : "/assets/images/profile_img.jpg" # 프로필 사진 경로
+  bio              : "ML/Deep Learning Researcher<br/>CS Student<br/>Sungkyunkwan University"
+  location         : "Suwon, Korea"
   email            : "jaheon555@g.skku.edu"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      # url: "https://your-website.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/Parkprogrammer"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/je-hyun-park-42414a27b/"
+
 auto_profile: true
 sidebar:
   nav: "sidebar-category"
@@ -280,8 +266,15 @@ compress_html:
     envs: development
 
 
-# Defaults
+# 레이아웃 기본값
 defaults:
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
   # _posts
   - scope:
       path: ""
@@ -289,7 +282,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
-      comments: # true
-      share: true
-      related: true
+      read_time: false  # 읽기 시간 비활성화
+      share: false      # 공유 버튼 비활성화
+      related: false    # 관련 게시물 비활성화

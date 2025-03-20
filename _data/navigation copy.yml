@@ -1,0 +1,22 @@
+# main links
+main:
+  - title: "Quick-Start Guide"
+    url: https://Parkprogrammer.github.io/minimal-mistakes/docs/quick-start-guide/
+  - title: "About"
+    url: /docs/_pages/about
+  - title: "Sample Posts"
+    url: /year-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
+ 
+sidebar-category:
+  - title: "About Me"
+    children:
+      - title: "Introduction"
+        url:  "/introduction"
+      - title: "Skills"
+        url: "/skills"
+      - title: "Achievements"
+        url:  "/achievements"

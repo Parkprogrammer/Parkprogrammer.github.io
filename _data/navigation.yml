@@ -1,22 +1,37 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://Parkprogrammer.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "About"
-    url: /docs/_pages/about
-  - title: "Sample Posts"
-    url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
- 
+    url: /about/
+  - title: "Projects"
+    url: /projects/
+  - title: "CV"
+    url: /assets/files/CV_JehyunPark.pdf
+  - title: "Research"
+    url: /research/
+
+# sidebar navigation
 sidebar-category:
-  - title: "About Me"
+  - title: "Profile"
     children:
-      - title: "Introduction"
-        url:  "/introduction"
-      - title: "Skills"
-        url: "/skills"
-      - title: "Achievements"
-        url:  "/achievements"
+      - title: "About Me"
+        url: /about/
+      - title: "CV/Resume"
+        url: /assets/files/CV_JehyunPark.pdf
+  
+  - title: "Projects"
+    children:
+      - title: "Healthcare & Medical AI"
+        url: /projects/#healthcare--medical-ai
+      - title: "Finance & Data Analytics"
+        url: /projects/#finance--data-analytics
+      - title: "Software Development"
+        url: /projects/#software-development
+      - title: "Machine Learning Research"
+        url: /projects/#machine-learning--ai-research
+  
+  - title: "Research"
+    children:
+      - title: "Research Interests"
+        url: /research/#research-interests
+      - title: "Publications"
+        url: /research/#publications

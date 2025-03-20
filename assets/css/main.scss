@@ -5,5 +5,149 @@ search: false
 
 @charset "utf-8";
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
+
+/* 간소화된 스타일 */
+
+// 전체 웹사이트에 적용할 폰트 패밀리
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+// 홈페이지 소개 텍스트 스타일
+.intro-text {
+  margin-bottom: 2em;
+  font-size: 1.1em;
+  
+  p {
+    margin-bottom: 1em;
+  }
+  
+  strong {
+    color: $primary-color;
+  }
+}
+
+// 섹션 스타일
+.research-interests, 
+.recent-highlights {
+  margin: 2em 0;
+  
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.8em;
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 0.3em;
+    color: $primary-color;
+  }
+  
+  ul {
+    margin-left: 1.5em;
+    
+    li {
+      margin-bottom: 0.5em;
+    }
+  }
+}
+
+// 버튼 링크 스타일
+.links-section {
+  margin: 2.5em 0;
+  
+  h3 {
+    margin-bottom: 1em;
+    font-size: 1.3em;
+  }
+  
+  .btn {
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+// 네비게이션 메뉴 단순화
+.masthead {
+  border-bottom: 1px solid $border-color;
+  
+  .masthead__inner-wrap {
+    max-width: 1200px;
+    padding: 1em;
+  }
+  
+  .greedy-nav {
+    background: transparent;
+    
+    a {
+      font-weight: normal;
+      color: $text-color;
+      
+      &:hover {
+        color: $primary-color;
+      }
+    }
+    
+    .visible-links a {
+      &:before {
+        height: 2px;
+        background: $primary-color;
+      }
+    }
+  }
+}
+
+// 프로필 영역 단순화
+.author__avatar {
+  img {
+    max-width: 150px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.author__content {
+  margin-top: 1em;
+  
+  .author__name {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+  }
+}
+
+// 페이지 여백 조정
+.page {
+  padding-right: 0;
+  width: 100%;
+  
+  @media (min-width: 80em) {
+    width: 75%;
+    padding-right: 2em;
+  }
+}
+
+// 전체 컨테이너 너비 조정
+.page__content {
+  p, li, dl {
+    font-size: 0.9em;
+  }
+}
+
+// 반응형 조정
+@media (max-width: 600px) {
+  .intro-text {
+    font-size: 1em;
+  }
+  
+  .links-section .btn {
+    display: block;
+    margin-bottom: 0.8em;
+  }
+}
