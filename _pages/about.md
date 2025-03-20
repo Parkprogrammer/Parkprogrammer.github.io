@@ -3,8 +3,8 @@ permalink: /about/
 title: "About Me"
 layout: single
 author_profile: true
-toc: true
-toc_sticky: true
+# toc: true
+# toc_sticky: true
 ---
 
 ## Research Interests

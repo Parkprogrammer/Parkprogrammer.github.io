@@ -3,8 +3,8 @@ permalink: /projects/
 title: "Projects"
 layout: single
 author_profile: true
-toc: true
-toc_sticky: true
+# toc: true
+# toc_sticky: true
 ---
 
 ## Healthcare & Medical AI
@@ -36,7 +36,7 @@ A research project for healthcare recommendation systems:
 ### 20th Korean Economic Securities Derivatives Competition
 *Jul 2024 — Feb 2025*
 
-![ETF Project](/assets/images/projects/etf_project.jpg)
+<!-- ![ETF Project](/assets/images/projects/etf_project.jpg) -->
 
 A competitive project focused on designing ETFs for IPO stocks:
 
@@ -60,7 +60,7 @@ Designed a correlation analysis model between stocks (Fin2Vec):
 ### SNS Platform for College Students
 *Jun 2023 — Dec 2023*
 
-![CLIPPED App](/assets/images/projects/clipped_app.jpg)
+<!-- ![CLIPPED App](/assets/images/projects/clipped_app.jpg) -->
 
 An entrepreneurial project developing a social networking platform:
 
