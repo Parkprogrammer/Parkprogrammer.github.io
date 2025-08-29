@@ -19,7 +19,7 @@ title: Jehyun Park
   <!-- <p class="subtitle"><em>Keep it simple, but not simpler</em></p> -->
 </div>
 
-**Currently in B.S majoring in Computer Science at [Sungkyunkwan University](https://www.skku.edu/). I work on Optimizing Neural Networks and developing Generalization algorithms.**
+**Currently in B.S majoring in Computer Science at [Sungkyunkwan University](https://www.skku.edu/). I am working on Optimizing Neural Networks and developing Generalization algorithms.**
 
 I've conducted research in **few-shot learning** and **model-compression**, focusing on solving **Out-Of-Distribution** problems and improving performance in **low-paramter situations**. Recently, i was a Research Assistant at **[ML/AI Lab](https://mlai.yonsei.ac.kr/home)** at **[Yonsei University](https://www.yonsei.ac.kr/sc/index.do)**.
 
