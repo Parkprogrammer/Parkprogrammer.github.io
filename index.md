@@ -23,8 +23,6 @@ title: Jehyun Park
 
 I've conducted research in **few-shot learning** and **model-compression**, focusing on solving **Out-Of-Distribution** problems and improving performance in **low-paramter situations**. Recently, i was a Research Assistant at **[ML/AI Lab](https://mlai.yonsei.ac.kr/home)** at **[Yonsei University](https://www.yonsei.ac.kr/sc/index.do)**.
 
-I am a Computer Science student at [Sungkyunkwan University](https://www.skku.edu/) working on machine learning applications in healthcare and industrial domains. Currently, I work as an AI Researcher at [The Catholic University of Korea St. Vincent's Hospital](https://www.catholic.ac.kr/).
-
 My research aims to **develop foundation models** for **better generalization** through optimization and interpretibility. I am particularly interested in Surrogate-modeling, State-Space-modeling and Circuit base understanding of DNNs.
 
 Always feel free to reach out to me with things you find exciting. Always open for new ideas :)
