@@ -25,7 +25,7 @@ I've conducted research in **few-shot learning** and **model-compression**, focu
 
 I am a Computer Science student at [Sungkyunkwan University](https://www.skku.edu/) working on machine learning applications in healthcare and industrial domains. Currently, I work as an AI Researcher at [The Catholic University of Korea St. Vincent's Hospital](https://www.catholic.ac.kr/).
 
-My research aims to **develop foundation models** for **solving better generalization** through optimization and interpretibility. I am particularly interested in Surrogate-modeling, State-Space-modeling and Circuit base understanding of DNNs.
+My research aims to **develop foundation models** for **better generalization** through optimization and interpretibility. I am particularly interested in Surrogate-modeling, State-Space-modeling and Circuit base understanding of DNNs.
 
 Always feel free to reach out to me with things you find exciting. Always open for new ideas :)
 
