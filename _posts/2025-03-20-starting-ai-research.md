@@ -1,17 +1,15 @@
 ---
+layout: default
 title: "Starting My Journey as an AI Researcher"
 date: 2025-03-20
-categories:
-  - blog
-tags:
-  - research
-  - healthcare
-  - machine-learning
-header:
-  teaser: /assets/images/posts/ai-research-teaser.jpg
-toc: true
-toc_sticky: true
 ---
+
+<nav>
+  <a href="/">Home</a>
+  <a href="/blog/">Blog</a>
+  <a href="/publications/">Publications</a>
+  <a href="/assets/files/CV_PHJ.pdf">CV</a>
+</nav>  
 
 ## Beginning My AI Research Journey
 

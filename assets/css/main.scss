@@ -1,153 +1,154 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
-search: false
 ---
 
-@charset "utf-8";
-
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
-@import "minimal-mistakes";
-
-/* 간소화된 스타일 */
-
-// 전체 웹사이트에 적용할 폰트 패밀리
+// XMin 스타일 완전 적용
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.6;
+  max-width: 900px;
+  margin: auto;
+  padding: 1em;
+  line-height: 1.6em;
+  font-family: Optima, Candara, Calibri, Arial, sans-serif;
 }
 
-// 홈페이지 소개 텍스트 스타일
-.intro-text {
+nav {
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  padding: .5em 0 1em 0;
   margin-bottom: 2em;
-  font-size: 1.1em;
-  
-  p {
-    margin-bottom: 1em;
-  }
-  
-  strong {
-    color: $primary-color;
-  }
 }
 
-// 섹션 스타일
-.research-interests, 
-.recent-highlights {
-  margin: 2em 0;
-  
-  h2 {
-    font-size: 1.5em;
-    margin-bottom: 0.8em;
-    border-bottom: 1px solid $border-color;
-    padding-bottom: 0.3em;
-    color: $primary-color;
-  }
-  
-  ul {
-    margin-left: 1.5em;
-    
-    li {
-      margin-bottom: 0.5em;
-    }
-  }
+nav a {
+  margin: 0 1em;
+  color: #0066cc;
+  text-decoration: none;
 }
 
-// 버튼 링크 스타일
-.links-section {
-  margin: 2.5em 0;
-  
-  h3 {
-    margin-bottom: 1em;
-    font-size: 1.3em;
-  }
-  
-  .btn {
-    margin-right: 0.5em;
-    margin-bottom: 0.5em;
-    transition: all 0.3s ease;
-    
-    &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-  }
+nav a:hover {
+  text-decoration: underline;
 }
 
-// 네비게이션 메뉴 단순화
-.masthead {
-  border-bottom: 1px solid $border-color;
-  
-  .masthead__inner-wrap {
-    max-width: 1200px;
-    padding: 1em;
-  }
-  
-  .greedy-nav {
-    background: transparent;
-    
-    a {
-      font-weight: normal;
-      color: $text-color;
-      
-      &:hover {
-        color: $primary-color;
-      }
-    }
-    
-    .visible-links a {
-      &:before {
-        height: 2px;
-        background: $primary-color;
-      }
-    }
-  }
+// 프로필 섹션 수정
+.profile-section {
+  text-align: center;
+  margin-bottom: -12em;
+  position: relative;
 }
 
-// 프로필 영역 단순화
-.author__avatar {
-  img {
-    max-width: 150px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+.profile-image {
+  float: right;
+  margin-left: 0em;  // 더 가깝게
+  margin-bottom: 0.5em;
 }
 
-.author__content {
-  margin-top: 1em;
-  
-  .author__name {
-    font-size: 1.2em;
-    margin: 0.5em 0;
-  }
+.profile-image img {
+  width: 240px;
+  height: 240px;
+  border-radius: 0;  // 네모로 변경 (둥글지 않게)
+  object-fit:contain;
 }
 
-// 페이지 여백 조정
-.page {
-  padding-right: 0;
+h1 {
+  text-align: center;
+  font-size: 2.5em;  // 폰트 크기 줄임
+  margin: 1em 0 1.3em 0;
+  margin-top: 1.3em;
+  font-weight: normal;
+  letter-spacing: 0.0em;  // 자간 줄임
+  transform: translateX(100px);
+}
+
+.subtitle {
+  font-size: 1.1em;  // 부제목 크기 줄임
+  color: #666;
+  margin-bottom: 2em;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 2em 0 1em 0;
+  font-weight: normal;
+}
+
+p {
+  margin-bottom: 1.2em;
+  text-align: justify;
+}
+
+p:has(strong):contains("Contacts") {
+  text-align: left;
+}
+
+.contacts {
+  text-align: left;
+}
+
+strong {
+  color: #000;
+  font-weight: 600;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+table {
   width: 100%;
-  
-  @media (min-width: 80em) {
-    width: 75%;
-    padding-right: 2em;
-  }
+  margin: 1em 0 2em 0;
+  border-collapse: collapse;
 }
 
-// 전체 컨테이너 너비 조정
-.page__content {
-  p, li, dl {
-    font-size: 0.9em;
-  }
+table td {
+  padding: 0.3em 1em 0.3em 0;
+  border: none;
+  vertical-align: top;
 }
 
-// 반응형 조정
-@media (max-width: 600px) {
-  .intro-text {
-    font-size: 1em;
-  }
-  
-  .links-section .btn {
-    display: block;
-    margin-bottom: 0.8em;
-  }
+table td:first-child {
+  font-weight: normal;
+  color: #666;
+  white-space: nowrap;
+  width: 120px;
+}
+
+footer {
+  border-top: 1px solid #ddd;
+  padding-top: 1em;
+  margin-top: 3em;
+  text-align: center;
+  color: #666;
+  font-size: 0.9em;
+}
+
+footer hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin-bottom: 1em;
+}
+
+// 플로팅 해제를 위한 클리어픽스
+.profile-section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+// 블로그 목록 스타일
+main ul {
+  list-style: none;
+  padding: 0;
+}
+
+main ul li {
+  margin: 0.5em 0;
+  font-size: 1em;
+}
+
+main ul li a {
+  margin-left: 1em;
 }

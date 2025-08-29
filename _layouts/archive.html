@@ -1,26 +1,46 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/blog/">Blog</a>
+    <a href="/publications/">Publications</a>
+    <a href="/assets/files/CV_PHJ.pdf">CV</a>
+  </nav>
 
-{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
-  {% include page__hero.html %}
-{% elsif page.header.video.id and page.header.video.provider %}
-  {% include page__hero_video.html %}
-{% endif %}
+  <main>
+    <h1>{{ page.title }}</h1>
+    
+    {% if page.title == "Blog" %}
+      <ul>
+        {% for post in site.posts %}
+          <li>
+            {{ post.date | date: "%Y/%m/%d" }} 
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% elsif page.title == "Publications" %}
+      <ul>
+        {% for pub in site.publications %}
+          <li>
+            {{ pub.year }} 
+            <a href="{{ pub.url }}">{{ pub.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </main>
 
-{% if page.url != "/" and site.breadcrumbs %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
-{% endif %}
-
-<div id="main" role="main">
-  {% include sidebar.html %}
-
-  <div class="archive">
-    {% unless page.header.overlay_color or page.header.overlay_image %}
-      <h1 id="page-title" class="page__title">{{ page.title }}</h1>
-    {% endunless %}
-    {{ content }}
-  </div>
-</div>
+  <footer>
+    <hr>
+    <p>© 2025 Jehyun Park</p>
+  </footer>
+</body>
+</html>

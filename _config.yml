@@ -12,7 +12,7 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+# minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # 사이트 설정
 title: "Jehyun Park"
@@ -98,6 +98,13 @@ analytics:
     tracking_id          :
     anonymize_ip         : # true, false (default)
 
+collections:
+  blog:
+    output: true
+    permalink: /blog/:name/
+  publications:
+    output: true
+    permalink: /publications/:name/
 
 # Site Author
 author:
@@ -280,8 +287,8 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
-      author_profile: true
+      layout: default # single
+      author_profile: false # true
       read_time: false  # 읽기 시간 비활성화
       share: false      # 공유 버튼 비활성화
       related: false    # 관련 게시물 비활성화
