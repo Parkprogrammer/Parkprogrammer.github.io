@@ -34,11 +34,20 @@ nav a:hover {
   position: relative;
 }
 
+.profile-section ~ p {
+  position: relative;
+  z-index: 10; // 텍스트를 앞으로
+  margin-bottom: 1.2em;
+  // text-align: left;
+}
+
 .profile-image {
   float: right;
   margin-left: 0em;  // 더 가깝게
   margin-bottom: 0.5em;
+  z-index: 1;
 }
+
 
 .profile-image img {
   width: 240px;
