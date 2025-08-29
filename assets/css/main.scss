@@ -57,6 +57,14 @@ h1 {
   transform: translateX(100px);
 }
 
+body:has(nav) main h1 {
+  text-align: center;
+  font-size: 2em;
+  margin: 1em 0 1.3em 0;
+  transform: translateX(010px);
+}
+
+
 .subtitle {
   font-size: 1.1em;  // 부제목 크기 줄임
   color: #666;
