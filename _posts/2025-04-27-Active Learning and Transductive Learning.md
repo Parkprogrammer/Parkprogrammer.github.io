@@ -68,6 +68,6 @@ $$
 
 </div>
 
-더 자세한 내용은 추후 [Learning to propagate labels: Transductive propagation network for few-shot learning(ICLR2019)](https://arxiv.org/pdf/1805.10002) 논문에서 다루고자 한다.
+더 자세한 내용은 추후 다른 포스트에서 [Learning to propagate labels: Transductive propagation network for few-shot learning(ICLR2019)](https://arxiv.org/pdf/1805.10002) 논문을 통해 다루고자 한다.
 
 <br/><br/><br/><br/><br/><br/>
