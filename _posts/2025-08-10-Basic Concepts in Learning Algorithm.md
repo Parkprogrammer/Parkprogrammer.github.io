@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Basic Concepts in Learning Algorithm"
-date: 2025-08-30
+date: 2025-08-10
 ---
 
 <nav>
