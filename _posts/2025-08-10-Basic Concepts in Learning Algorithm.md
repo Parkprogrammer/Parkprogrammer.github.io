@@ -58,7 +58,7 @@ Before Neural Networks, *SVMs* were a great way to solve classification problems
 
 So a Neural Network is a system that uses ***non-linear function*** to learn complex features from input data with ***Selective information transformation*** and ***geometrical folding***. But there are so many other things known and unknown that enables Neural Networks to perform extreemly well.
 
-The most important feature must me ***Depth***.<br/><br/>
+The most important feature must be ***Depth***.<br/><br/>
 
 <div style="text-align: center;">
   <img src="/assets/images/posts/BCLA-3" alt="이미지 설명" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
