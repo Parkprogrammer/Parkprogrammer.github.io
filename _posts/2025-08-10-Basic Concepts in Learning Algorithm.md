@@ -87,7 +87,11 @@ $$
 
 The above formula is from [Deep Learning-Prince(2023)](https://anthology-of-data.science/resources/prince2023udl.pdf).
 
-$$N_r$$ is the number of regions for $$K$$ layers, where $$D$$ is the number of hidden units in each $$K$$ layers and $$D_i$$ is the input dimension of the vector. So for classifying various outputs, the variety of representation exponentially grows with depth ($$K$$). But there are still many things to know like ***Curse of Dimensionality***, ***Out-Of-Distribution***, ***Inductive bias***. Like, if things were this simple, *Deep learning may have worked since the 2000s.*
+$$N_r$$ is the number of regions for $$K$$ layers, where $$D$$ is the number of hidden units in each $$K$$ layers and $$D_i$$ is the input dimension of the vector. So for classifying various outputs, the variety of representation exponentially grows with depth ($$K$$). But there are still many things to know like ***Initialization***, ***Interpolation***, ***Stability***. Like, if things were this simple, *Deep learning may have worked since the 2000s.*
+
+I'm not going to talk about the characteristics and differences between width and depth for now. Just know that *width* increases (though quite obvious) the dimension of the hidden states, meaning that the hidden units have more ***degree of freedom***. A NN which needs ***compression decreases dimension***, and increases dimension if ***more and complex information expansion*** is needed from the input vector. (*[Some papers say depth is more important than width](https://arxiv.org/pdf/2202.03841), i agree if there is a optimizer*)
+
+So now we have the *matrices* and *activation functions*, and we also know that big neural networks perform well. Most people say that it was the GPUs that made NN possible, but this is only half true. To know why this architecture was possible, we should definetly demystify it's learning algorithm, ***Gradient Descent and Backpropagation***.
 
 ## How does it learn?
 
