@@ -72,7 +72,19 @@ The most important feature must be ***Depth***.<br/><br/>
 
 Backbone ideas are from the Article in Lesswrong *[A Simple Introduction to Neural Networks](https://www.lesswrong.com/posts/Madwb2t79LGrLqWLH/a-simple-introduction-to-neural-networks)*
 
+A simple but not 100% technical answer is that, models learns by ***reversing the hierachical generation process of nature***. Think of a generation of face process for example. We create a face first with the shape, the location of eyes, nose and lips .. and than decide on the detail of these organs. The famous AlexNet that opened the possibility of Deep Neural Networks also shows ***Hierachical Detectors*** where curve detectros in the earlier layers create ear detectors in the later layers. So each layers ***devides the features needed to learn by models into more specific and divers features***.(You can also think of **Dynamic Programming**, which divides the problem into sub-problems)
+
+*For Specific explanations, i would recommend reading this article from Chris Olah [Zoom In: An Introduction to Circuits](https://distill.pub/2020/circuits/zoom-in/)*.
+
+Another way of putting it is by using the terminology of ***complexity and regions***. We can view a Matrix as a transformation of *coordinates* of *input vectors* in *parameter space*. For example, a  A : [[0,1] , [1,0]] Matrix swaps the x and y axis of the input vector [x, y] into [y,x]. In this view, we can think of these *activation functions* and *matrices* as shifting of coordinates of input vectors into ***different regions to classify what region each point resides in***.
+
+<div style="text-align: center;">
+  <img src="/assets/images/posts/BCLA-4.jpg" alt="이미지 설명" style="max-width: 50%; height: auto; display: block; margin: 0 auto;">
+  <p style="text-align: center; color: #888; font-size: 14px; margin-top: 5px; margin-bottom: 0;">A Screen shot from the video of Welch Labs</p>
+</div>
+
+
 
 ## How does it learn?
 
-<br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/> 
