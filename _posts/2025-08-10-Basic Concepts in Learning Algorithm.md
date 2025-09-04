@@ -4,6 +4,10 @@ title: "Basic Concepts in Learning Algorithm"
 date: 2025-08-10
 ---
 
+<head>
+  <link rel="icon" type="/assets/images/logo.png" href="/assets/images/logo.png">
+</head>
+
 <nav>
   <a href="/">Home</a>
   <a href="/blog/">Blog</a>
@@ -65,6 +69,9 @@ The most important feature must be ***Depth***.<br/><br/>
 </div>
 
 ## Why do we need so many layers?
+
+Backbone ideas are from the Article in Lesswrong *[A Simple Introduction to Neural Networks](https://www.lesswrong.com/posts/Madwb2t79LGrLqWLH/a-simple-introduction-to-neural-networks)*
+
 
 ## How does it learn?
 
