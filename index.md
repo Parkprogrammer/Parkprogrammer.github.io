@@ -10,9 +10,6 @@ title: Jehyun Park
   <a href="/assets/files/CV_PHJ.pdf">CV</a>
 </nav>
 
-<head>
-  <link rel="icon" type="/assets/images/logo.png" href="/assets/images/logo.png">
-</head>
 
 <div class="profile-section">
   <div class="profile-image">
