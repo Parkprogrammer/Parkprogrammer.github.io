@@ -4,10 +4,6 @@ title: "Basic Concepts in Learning Algorithm"
 date: 2025-08-10
 ---
 
-<head>
-  <link rel="icon" type="/assets/images/logo.png" href="/assets/images/logo.png">
-</head>
-
 <nav>
   <a href="/">Home</a>
   <a href="/blog/">Blog</a>
@@ -76,15 +72,25 @@ A simple but not 100% technical answer is that, models learns by ***reversing th
 
 *For Specific explanations, i would recommend reading this article from Chris Olah [Zoom In: An Introduction to Circuits](https://distill.pub/2020/circuits/zoom-in/)*.
 
-Another way of putting it is by using the terminology of ***complexity and regions***. We can view a Matrix as a transformation of *coordinates* of *input vectors* in *parameter space*. For example, a  A : [[0,1] , [1,0]] Matrix swaps the x and y axis of the input vector [x, y] into [y,x]. In this view, we can think of these *activation functions* and *matrices* as shifting of coordinates of input vectors into ***different regions to classify what region each point resides in***.
+Another way of putting it is by using the terminology of ***complexity and regions***. We can view a Matrix as a transformation of *coordinates* of *input vectors* in *parameter space*. For example, a  A : [[0,1] , [1,0]] Matrix swaps the x and y axis of the input vector [x, y] into [y,x]. In this view, we can think of these *activation functions* and *matrices* as shifting of coordinates of input vectors into ***different regions to classify what region each point resides in***.<br/><br/>
 
 <div style="text-align: center;">
   <img src="/assets/images/posts/BCLA-4.jpg" alt="이미지 설명" style="max-width: 50%; height: auto; display: block; margin: 0 auto;">
   <p style="text-align: center; color: #888; font-size: 14px; margin-top: 5px; margin-bottom: 0;">A Screen shot from the video of Welch Labs</p>
 </div>
 
+Think of a highly expressive *n category* classifier such as *SVMs* or *Decision Trees*. These models devide the output space into *n* regions, which are (if trained well) 1:1 to each categories (Region for A/B/C/D...). In a ***Neural Network***, this region is made in each layers for categories, features and many other complex measures, ***and this number grows exponentially with depth.*** 
 
+$$
+N_r = \prod_{k=1}^{K-1} \left( \frac{D}{D_i} + 1 \right)^{D_i} \sum_{j=0}^{D_i} \binom{D}{j}
+$$
+
+The above formula is from [Deep Learning-Prince(2023)](https://anthology-of-data.science/resources/prince2023udl.pdf).
+
+$$N_r$$ is the number of regions for $$K$$ layers, where $$D$$ is the number of hidden units in each $$K$$ layers and $$D_i$$ is the input dimension of the vector. So for classifying various outputs, the variety of representation exponentially grows with depth ($$K$$). But there are still many things to know like ***Curse of Dimensionality***, ***Out-Of-Distribution***, ***Inductive bias***. Like, if things were this simple, *Deep learning may have worked since the 2000s.*
 
 ## How does it learn?
+
+
 
 <br/><br/><br/><br/><br/><br/> 
