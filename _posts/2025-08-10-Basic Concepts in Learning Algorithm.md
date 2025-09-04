@@ -55,10 +55,10 @@ But this only scratches the surface of what a Neural Net actually does. There mu
 
 ***MLPs***, so well used nowdays are overlooked in its mechanism, which was actually a crucial breakthrough that solved the famous *XOR* problem. A *hidden layer* is a simple concept of sequentially applying *N* number of *matrix multiplication*. But as we all know, $$ W₂(W₁x + b₁) + b₂ = (W₂W₁)x + (W₂b₁ + b₂) $$ shows that any sequential number of *matrix multiplication* can always be represented as a single layer of *matrix multiplication*. **So how does a *hidden layer* exist?** ***Activation functions***.
 
-Before Neural Networks, *SVMs* were a great way to solve classification problems. Apart from the *soft vectors margin algorithm* that created robust classifiers, there was another method that made huge breakthroughs. ***Kernel maps***, which projected input data into *high dimensional space* solved many non-linear problems. From **Polynomial Kernels** to **Gaussian Kernels**, each non-linear map was used to extract meaningful features to classify it's data.
+Before Neural Networks, *SVMs* were a great way to solve classification problems. Apart from the *soft vectors margin algorithm* that created robust classifiers, there was another method that made huge breakthroughs. ***Kernel maps***, which projected input data into *high dimensional space* solved many non-linear problems. From **Polynomial Kernels** to **Gaussian Kernels**, each non-linear map was used to extract non-linear complex features to classify it's data.
 
 ***Activation functions*** are these kind of *non-linear maps* that enable Matrix Systems to learn much more complex structure or features. The above figure shows the ***geometrical folding of feature spaces*** that these activation functions apply. <br/>
-> There are a lot of discussions and improvements needed on this *activation function*. which i believe is a crucial part in optimization such as ***Sparsity, Depth, Kernels***.. Will Come back to it in another post.
+> There are a lot of discussions and improvements needed on this *activation function*. which i believe is a crucial part in optimization such as ***Sparsity, Ordinary Differential Equations, Kernels***.. Will Come back to it in another post.
 
 So a Neural Network is a system that uses ***non-linear function*** to learn complex features from input data with ***Selective information transformation*** and ***geometrical folding***. But there are so many other things known and unknown that enables Neural Networks to perform extreemly well.
 

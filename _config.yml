@@ -19,7 +19,8 @@ title: "Jehyun Park"
 subtitle: # 서브타이틀 제거
 name: "Jehyun Park"
 description: "Machine Learning Researcher & Computer Science Engineer"
-url: "https://Parkprogrammer.github.io"
+url: "https://parkprogrammer.github.io"
+baseurl: ""
 repository: # GitHub 사용자명/저장소명
 logo: # 로고 이미지 경로 (선택사항)
 masthead_title: # 헤더에 표시될 제목 (비워두면 site.title 사용)
