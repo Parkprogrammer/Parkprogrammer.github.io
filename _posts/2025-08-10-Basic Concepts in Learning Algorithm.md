@@ -85,7 +85,7 @@ $$
 N_r = \prod_{k=1}^{K-1} \left( \frac{D}{D_i} + 1 \right)^{D_i} \sum_{j=0}^{D_i} \binom{D}{j}
 $$
 
-The above formula is from [Deep Learning-Prince(2023)](https://anthology-of-data.science/resources/prince2023udl.pdf).
+The above formula is from [Understanding Deep Learning-Prince(2023)](https://anthology-of-data.science/resources/prince2023udl.pdf).
 
 $$N_r$$ is the number of regions for $$K$$ layers, where $$D$$ is the number of hidden units in each $$K$$ layers and $$D_i$$ is the input dimension of the vector. So for classifying various outputs, the variety of representation exponentially grows with depth ($$K$$). But there are still many things to know like ***Initialization***, ***Interpolation***, ***Stability***. Like, if things were this simple, *Deep learning may have worked since the 2000s.*
 
@@ -94,6 +94,81 @@ I'm not going to talk about the characteristics and differences between width an
 So now we have the *matrices* and *activation functions*, and we also know that big neural networks perform well. Most people say that it was the GPUs that made NN possible, but this is only half true. To know why this architecture was possible, we should definetly demystify it's learning algorithm, ***Gradient Descent and Backpropagation***.
 
 ## How does it learn?
+
+Backbone ideas are from the post by *Andrej Karpathy [Yes you should understand backprop](https://karpathy.medium.com/yes-you-should-understand-backprop-e2f06eab496b#.hfkm6pmg1).*
+
+Many think of ***Gradient Descent*** as a algorithm from *Machine Learning*, but this is devastatingly wrong. This method is a very old calculus method which was invented to find the minimum of a certain function, also known as the ***convex optimization problem***. 
+
+Before talking about *Backpropagation* and *chain rules*, there must be at least some understanding of the basic formula of *Gradient Descent*, which later shows why we need ***Batch Normalization***, and how ***Momentum based optimizers(ADAM)*** actually work.
+
+The formula below is from the lecture note on *convex optimization* by professor [Woocheol Choi](https://sites.google.com/site/wchoiam) from ***SKKU***.
+
+$$
+\min_{x \in \mathbb{R}^n} f(x)
+$$
+
+$$
+x_{t+1} = x_t - \eta \nabla f(x_t)
+$$
+
+So this is the *formula* we all know, the ball $x_t$ goes down the sloap with the information from gradient $\eta \nabla f(x_t)$. But why does this formula work? As i don't have a degree in *Mathematics*, my answer might not be sufficient. So i bring the explanation from my college professor, who proved by using ***Taylor expansion***.
+
+$$
+f(y) - f(x) = \int_x^y f'(s)ds \quad (1.9)
+$$
+
+$$
+f(y) \leq f(x) + (y - x)f'(x) + \frac{|f''(x)|}{2}(y - x)^2 \quad (1.15)
+$$
+
+This is where the $\text{second order taylor expansion}$ is used. The proof between (1.9) ~ (1.15) was skipped. Just for now. (Actually the original proof takes extra steps with another huge assumption that 
+$$
+|f''(x)| \leq C
+$$
+which later refers to (1.16) using $O$, a constant insted of $|f''(x)|$. 
+
+$\text{This is where Normalization is needed! }$
+To ensure that 
+$$
+|f''(x)| \leq C
+$$ 
+holds for the function $f$ to find the minimum. And is so called as $ \beta \text{ smoothness.} $ *(I think there are other explanations too in this Batch Normalization theory, but for now i will focus on the effect in terms of gradient descent)*
+
+
+$$
+f(y) = f(x) + (y - x)f'(x) + O\left((y - x)^2\right) \quad (1.16) 
+$$
+
+$$
+\text{and if   } y \approx x\text{, then}
+$$
+
+$$
+f(y) \approx f(x) + (y - x)f'(x) \quad (1.17)
+$$
+
+$$
+\text{Inserting   } y = x_{t+1} \text{   and   } x = x_{t} \text{   with   } x_{t+1} = x_t - \eta \nabla f(x_t) \text{,   we find   }
+$$
+
+
+$$
+f(x_{t+1}) \approx f(x_t) - \eta |f'(x_t)|^2 \quad (1.18)
+$$
+
+So now we can see that $f(x_{t+1})$ decreases from $f(x_t)$ as the gradient descent takes place as 
+$$
+x_{t+1} = x_t - \eta \nabla f(x_t)
+$$
+.
+
+> There are so many other things to talk about such as ***loss landscape, global & local minima, sharp & flat minima, eigenvalue-distribution and baysin priors***. But they will be discussed in a later post.
+
+But we are not searching for a *minima* of simple $f$. We are searching for a *minima* of 
+$$
+f = \sigma_\ell \circ h_\ell \circ \cdots \circ \sigma_2 \circ h_2 
+$$ 
+where $h$ is a hidden layer function and $f$ is a ***composite function***. So we expand the *Gradient Descent* with ***Back propagation consisting of chain rules***. 
 
 
 
