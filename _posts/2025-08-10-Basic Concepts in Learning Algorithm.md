@@ -95,7 +95,7 @@ So now we have the *matrices* and *activation functions*, and we also know that 
 
 ## How does it learn?
 
-Backbone ideas are from the post by *Andrej Karpathy [Yes you should understand backprop](https://karpathy.medium.com/yes-you-should-understand-backprop-e2f06eab496b#.hfkm6pmg1).*
+From the lecture of *IDEAS AND COMPUTATIONS IN THE FIRST ORDER OPTIMIZATION* by professor [Woocheol Choi](https://sites.google.com/site/wchoiam) at *SKKU*.
 
 Many think of ***Gradient Descent*** as a algorithm from *Machine Learning*, but this is devastatingly wrong. This method is a very old calculus method which was invented to find the minimum of a certain function, also known as the ***convex optimization problem***. 
 
@@ -170,6 +170,8 @@ f = \sigma_\ell \circ h_\ell \circ \cdots \circ \sigma_2 \circ h_2
 $$ 
 where $h$ is a hidden layer function and $f$ is a ***composite function***. So we expand the *Gradient Descent* with ***Back propagation consisting of chain rules***. 
 
+## Why is Backpropagation ***the only*** learning algorithm? *(For now)*
 
+Backbone ideas are from the post by *Andrej Karpathy [Yes you should understand backprop](https://karpathy.medium.com/yes-you-should-understand-backprop-e2f06eab496b#.hfkm6pmg1)* and again *Welch Labs [The F=ma of Artificial Intelligence [Backpropagation, How Models Learn Part 2]](https://www.youtube.com/watch?v=VkHfRKewkWw&t=1155s).*
 
 <br/><br/><br/><br/><br/><br/> 
