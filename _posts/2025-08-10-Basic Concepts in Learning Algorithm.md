@@ -121,21 +121,21 @@ $$
 f(y) \leq f(x) + (y - x)f'(x) + \frac{|f''(x)|}{2}(y - x)^2 \quad (1.15)
 $$
 
-This is where the $\text{second order taylor expansion}$ is used. The proof between (1.9) ~ (1.15) was skipped. Just for now. (Actually the original proof takes extra steps with another huge assumption that 
+This is where the $\text{second order taylor expansion}$ is used. The proof between (1.9) ~ (1.15) was skipped. Just for now. (Actually, the original proof takes extra steps with another huge assumption that 
 $$
 |f''(x)| \leq C
 $$
-which later refers to (1.16) using $O$, a constant insted of $|f''(x)|$. 
+which later refers to (1.16) using $O$, a constant insted of $|f''(x)|$. )
 
 $\text{This is where Normalization is needed! }$
 To ensure that 
 $$
 |f''(x)| \leq C
 $$ 
-holds for the function $f$ to find the minimum. And is so called as $ \beta \text{ smoothness.} $ *(I think there are other explanations too in this Batch Normalization theory, but for now i will focus on the effect in terms of gradient descent)*
+holds for the function $f$ to find the minimum with the $$|f''(x)|$$ function staying in the *upper-bound* of constant $C$. And is so called as $ \beta \text{ smoothness.} $ *(I think there are other explanations too in this Batch Normalization theory, but for now i will focus on the effect in terms of gradient descent)*
 
 
-$$
+$$ 
 f(y) = f(x) + (y - x)f'(x) + O\left((y - x)^2\right) \quad (1.16) 
 $$
 
