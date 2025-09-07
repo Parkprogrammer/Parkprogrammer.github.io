@@ -174,4 +174,20 @@ where $h$ is a hidden layer function and $f$ is a ***composite function***. So w
 
 Backbone ideas are from the post by *Andrej Karpathy [Yes you should understand backprop](https://karpathy.medium.com/yes-you-should-understand-backprop-e2f06eab496b#.hfkm6pmg1)* and again *Welch Labs [The F=ma of Artificial Intelligence [Backpropagation, How Models Learn Part 2]](https://www.youtube.com/watch?v=VkHfRKewkWw&t=1155s).*
 
+A multiple layer of matrices with activation functions(*non-linear maps*) using *gradient descent* to find the solution that minimizes the function (***more specifically cost or loss functions. MSE, Cross-Entropy, ELBO... Will come back in another post***) output needs to be optimized. Think of a Netowrk with 2 layer of [4608, 9216] x σ x [9216, 10] matrices with a *cross-entropy* loss function.
+
+The input is a [2,48,48] image and you want to classify what digit label the image has. If there was no **back-propagation** to use, i would have think of a heuristic way of solving this problem. (*eg. devide the image by pixel groups, encode weights to detect shapes, sum up the scores, check the errors and search for a better algorithm*).
+
+The early neural nets were trained in this way, by twiking the values of weights by real human experts. But this is impossible if we have $10$ to $20$ layers *([4608, 9216] x σ1 x [9216, 9216] x σ2 x [9216, 9216] x ... x σ20 x [4608, 10])*, which means it is not *scalable*.
+
+Then can we describe each element of the *matrix components* as a mathematical *formula* and find the solution to that *formula*? This is where the ***chain rule*** comes in.
+
+
+<div style="text-align: center;">
+  <img src="/assets/images/posts/BCLA-5.jpg" alt="이미지 설명" style="max-width: 50%; height: auto; display: block; margin: 0 auto;">
+  <p style="text-align: center; color: #888; font-size: 14px; margin-top: 5px; margin-bottom: 0;">deeplearningbook chapter 6.</p>
+</div>
+
+But before showing the *chain-rule*, the *gradient descent* formula must be more clarified since it's not just $f$ we are optimizing.
+
 <br/><br/><br/><br/><br/><br/> 
