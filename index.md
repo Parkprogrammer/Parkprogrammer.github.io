@@ -37,7 +37,7 @@ Always feel free to reach out to me with things you find exciting. Always open f
   <tbody>
     <tr>
       <td>Sep, 2025</td>
-      <td><strong>1st Place</strong> in the <em>2025 Samsung AI Challenge</em>. Competed <em>individually</em> and received Grand Prize Award for Optimizing Large Language Model. Awarded 7,500$</td>
+      <td><strong>1st Place</strong> in the <em>2025 Samsung AI Challenge</em>. Competed <em><strong>individually</strong></em> and received Grand Prize Award for Optimizing Large Language Model. Awarded 7,500$</td>
     </tr>
     <tr>
       <td>Mar, 2025</td>
