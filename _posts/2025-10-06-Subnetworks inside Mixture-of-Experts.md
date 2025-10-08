@@ -168,6 +168,66 @@ easily exceeding \(d\) even for moderate \(k\). By contrast, dense outputs (larg
 
 Finally, the characteristics of sparse features above imply that only a few directions are active per input, and superposition means that many directions are available overall. Under this regime, inputs that share similar support patterns cluster in the router’s gating space, so even a simple router can conditionally separate them with a Top-𝑘 k rule. 
 
-Therefore each selected expert then specializes on a low-interference subspace, reducing gradient conflict and improving capacity utilization.
+Therefore each selected expert then specializes on a low-interference subspace, reducing gradient conflict and improving capacity utilization. But although theoryatically this sparsity have enabled the router to succesfully locate subspace, **this explicit way of deviding subspace have some issues**.
+
+Looking back at the original Vanilla FFN, the wording $\text{top-k}$ was originally used to inidicate the amount of activated neurons in the hidden states after the activation function (*ReLU* or *GeLU*).
+
+<div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px;">
+  <div style="flex: 1; max-width: 45%;">
+    <img src="/assets/images/posts/SMOE-5.jpg" alt="이미지 설명" style="width: 100%; height: auto; display: block;">
+    <p style="text-align: center; color: #888; font-size: 14px; margin-top: 5px; margin-bottom: 0;">Top-k in FFNs</p>
+  </div>
+  <div style="flex: 1; max-width: 45%;">
+    <img src="/assets/images/posts/SMOE-6.jpg" alt="이미지 설명" style="width: 100%; height: auto; display: block;">
+    <p style="text-align: center; color: #888; font-size: 14px; margin-top: 5px; margin-bottom: 0;">The Lazy Neuron Phenomenon: 
+    On Emergence of Activation Sparsity in Transformers</p>
+  </div>
+</div>
+
+
+This meant that while performing *key-value search* for information (see the Second part of Rank Loss), the original FFN used top-k as a computational efficiency term, using very few neurons. This was enabled since the Network already showed a very high sparsity rate in neurons across many architectures and layers (near $\text{3.5%}$).
+
+<div style="text-align: center;">
+  <img src="/assets/images/posts/SMOE-7.jpg" alt="이미지 설명" style="max-width: 30%; height: auto; display: block; margin: 0 auto;">
+  <p style="text-align: center; color: #888; font-size: 14px; margin-top: 5px; margin-bottom: 0;">The Lazy Neuron Phenomenon: 
+    On Emergence of Activation Sparsity in Transformers</p>
+</div>
+
+This meant that the $FFN_{\text{up_proj}}$ Matrix had a tendancy to shut-off most neurons (negative bias and enforced zeros), which could be seen in the figure above where there are **Generalized neurons** with over *50%* activation, and **Specialized neurons** with *5~30%* activation. 
+
+>> This was one of the key factors that enabled me to optimize the MoE architecture at Samsung AI Challenge. Experts also showed same tendencies, meaning that implicit neurons were made explicit by experts.
+
+But here lies a very important difference between the $\text{top-k}$ in **FFNs** and $\text{top-k}$ in **MoEs**.
+The $\text{top-k}$ in **FFNs** is a 1) **post-hoc selection** of features in the 2) **full feature space**, meaning that while training the model, no selection occurs. 
+
+<div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px;">
+  <div style="flex: 1; max-width: 45%;">
+    <img src="/assets/images/posts/SMOE-8.jpg" alt="이미지 설명" style="width: 100%; margin-top: 45px; height: auto; display: block;">
+    <p style="text-align: center; color: #888; font-size: 14px; margin-top: 5px; margin-bottom: 0;">The Lazy Neuron Phenomenon: 
+    On Emergence of Activation Sparsity in Transformers</p>
+  </div>
+  <div style="flex: 1; max-width: 30%;">
+    <img src="/assets/images/posts/SMOE-9.jpg" alt="이미지 설명" style="width: 100%; margin-left: 15px; height: auto; display: block;">
+    <p style="text-align: center; color: #888; font-size: 14px; margin-top: 5px; margin-bottom: 0;">Toy Models of Superposition</p>
+  </div>
+</div>
+
+The above figures show that **feature sparsity**, the characteristic that enables this sub-network occurs in the later phase of training. But if the **Router** tries to select $\text{top-k}$ from the early phase of training, it is likely to cause failure in load-balancing and optimization.
+
+>> This seems to be delt with in Deepseek-V3, where the authors applied a backpropagation-free method to solve this problem with scoring and bias, but still a heuristic method seem very hard to reproduce.
+
+And of-coures, the original $\text{top-k}$ is done as a method of optimizing a trained FFN, meaning that the $FFN_{\text{up_proj}}$ has trained implicitly to seperate the feature space by calculating all the loss of training samples in the whole space.
+But the router has ***less clue*** about which expert had chosen which part of the feature space (since only $\text{k}$ experts were activated for each sample), meaning that even if the expressioness may have improved, ***each expert draw the painting without global knowledge***.
+
+Many paper deal with this problem with capacity factors, shared experts, Knowledge Distillation and gradient-free methods.
+- [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](https://arxiv.org/pdf/2101.03961) : Capacity factor
+- [DeepSeek-V3 Technical Report](https://arxiv.org/pdf/2412.19437) : Scoring Bias(Also Known as Auxiliary-loss-free-method), Shared Experts
+- [Every Expert Matters: Towards Effective Knowledge Distillation for Mixture-of-Experts Language Models](https://arxiv.org/pdf/2502.12947) : Knowledge Distillation
+
+But is there a way that can make a more better inductive bias that is aware of the input-featuers? where sparse or not?
+
+
+## Gaussian Process and Sampling functions in Kernel Space
+
 
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>  
