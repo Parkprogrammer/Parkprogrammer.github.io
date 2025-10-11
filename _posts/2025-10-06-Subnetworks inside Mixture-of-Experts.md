@@ -224,10 +224,54 @@ Many paper deal with this problem with capacity factors, shared experts, Knowled
 - [DeepSeek-V3 Technical Report](https://arxiv.org/pdf/2412.19437) : Scoring Bias(Also Known as Auxiliary-loss-free-method), Shared Experts
 - [Every Expert Matters: Towards Effective Knowledge Distillation for Mixture-of-Experts Language Models](https://arxiv.org/pdf/2502.12947) : Knowledge Distillation
 
-But is there a way that can make a more better inductive bias that is aware of the input-featuers? where sparse or not?
+But is there a way that can make a more better inductive bias that is aware of the input-featuers? whether sparse or not?
 
 
-## Gaussian Process and Sampling functions in Kernel Space
+## Neural Process and Sampling functions in State Space of Sequences
+
+>> This part is purely my idea, meaning that it may lack evidence. So it may skip some details on certain parts ... Always open for corrections!
+
+Attention is a memory-aware inductive bias in contrast to *Markov-Chains*. Every time the model auto-regressively outputs a new token, the latent space is updated by Computing $O(N^2)$ tokens every time. 
+
+<div style="text-align: center;">
+  <img src="/assets/images/posts/SMOE-10.jpg" alt="이미지 설명" style="max-width: 55%; height: auto; display: block; margin: 0 auto;">
+  <p style="text-align: center; color: #888; font-size: 14px; margin-top: 5px; margin-bottom: 0;">Constrained Belief Updates Explain Geometric Structures inTransformer Representations </p>
+</div>
+
+Meanwhile, RNNs have a computation complexity of $O(N)$ since the next token only relies on the hidden state at $t\text{-}1$. Either way, both mechanisms have the same objective of updating ***sequence-state*** at token sequence $1 \text{~} t$. <br/>
+
+
+
+On the other hand, the **Feed-Forward-Networks** and **Mixture-of-Experts** are sequence-independent. Meaning that the computation taking place in this layer for each token, does not take into account the *context* in-which the tokens are located (*Positional Embedding does encode some time time information*).
+
+But why this architecture? I think the biggest reason is **computational efficiency**. All tokens share the *same network* to update the residul stream, meaning that it could be done **in-parallel** with a lot of room for optimization.
+
+<div style="display: flex; justify-content: center; align-items: flex-start; gap: 20px;">
+  <div style="flex: 1; max-width: 35%;">
+    <img src="/assets/images/posts/SMOE-11.jpg" alt="이미지 설명" style="width: 100%; height: auto; display: block;">
+    <p style="text-align: center; color: #888; font-size: 14px; margin-right: 45px; margin-top: 5px; margin-bottom: 0;">Feed-Forward-Network inside transforemr module</p>
+  </div>
+  <div style="flex: 1; max-width: 45%;">
+    <img src="/assets/images/posts/SMOE-12.jpg" alt="이미지 설명" style="width: 100%; margin-top: 45px; margin-left: 15px; height: auto; display: block;">
+    <p style="text-align: center; color: #888; font-size: 14px; margin-left: 35px; margin-top: 5px; margin-bottom: 0;">Mixture-of-Experts inside transformer module</p>
+  </div>
+</div>
+
+Mixture-of-Experts creates a room for more optimization not-only in computation but expressioness. It still does not consider context while performing computation like attention, but it **dynamically devides** the Large FFN into **sub-networks** at **inference-time**, boosting expressivness like the *superposition* method since sparsity creates more room for *orthogonal-like* features.
+
+But this kind of *"Using subnetworks at inference, increasing the Degree-Of-Freedom"* way of Artificial Intelligence is not new. Many know this inductive-bias from the famous paper from Google Deepmind, [Conditional Neural Processes](https://arxiv.org/pdf/1807.01613). ***And i think that Neural Process's inductive bias can be much more suitable than MoE in that it could 1)Devide the large network(function) into sub-networks(surrogate-model) and 2)Efficiently consider context at each auto-regressive NTP(next-token-prediction)***.
+
+A MoE Layer which has a *hyperparameter* of $k$ number of experts to choose becomes very hard to optimize 1)in early stages of training and 2)early layers.<br/><br/>
+1) As shown above, *sparsity* and *superposition* that makes the network easier to configure features comes after many iterations of training. But as the network tries to devide the network into fixed number of sub-networks, the load-balancing becomes very hard which could lead to top 10% of experts doing 80% of the work. *<- This phenomena was found at Qwen-A3B-30B Model while optimizing at the Samsung AI Challenge.*
+
+2) Also, as transformers are also *deep-neural-networks*, the experts at the early layers showed very similar outputs, meaning that forcing the model to choose $k$ number of sub-network that express similar features may not be a good choice for the network in terms of expressiveness. *<- Also found while optimizing Qwen-A3B-30B*
+
+A Neural Process, on the other had, could(or perhaps) avoid these optimization problems.
+
+<div style="text-align: center;">
+  <img src="/assets/images/posts/SMOE-13.jpg" alt="이미지 설명" style="max-width: 55%; height: auto; display: block; margin: 0 auto;">
+  <p style="text-align: center; color: #888; font-size: 14px; margin-top: 15px; margin-bottom: 0;">The Neural Process Family from yanndubs.github.io </p>
+</div>
 
 
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>  
