@@ -7,7 +7,7 @@ title: Jehyun Park
   <a href="/">Home</a>
   <a href="/blog/">Blog</a>
   <a href="/publications/">Publications</a>
-  <a href="/assets/files/CV_PHJ.pdf">CV</a>
+  <a href="/assets/files/CV_PJH.pdf">CV</a>
 </nav>
 
 
