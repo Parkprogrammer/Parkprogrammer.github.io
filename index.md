@@ -29,7 +29,7 @@ My research aims to **develop foundation models** for **better generalization** 
 Always feel free to reach out to me with things you find exciting. Always open for new ideas :)
 
 <!-- **Contacts:** [jaheon555@g.skku.edu](mailto:jaheon555@g.skku.edu) | [GitHub](https://github.com/Parkprogrammer) | [LinkedIn](https://linkedin.com/in/je-hyun-park-42414a27b/) -->
-<p class="contacts"><strong>Contacts:</strong> <a href="mailto:jaheon555@g.skku.edu">jaheon555@g.skku.edu</a> | <a href="https://github.com/Parkprogrammer">GitHub</a> | <a href="https://linkedin.com/in/je-hyun-park-42414a27b/">LinkedIn</a></p> 
+<p class="contacts"><strong>Contacts:</strong> <a href="mailto:jaheon555@g.skku.edu">jaheon555@g.skku.edu</a> | <a href="https://github.com/Parkprogrammer">GitHub</a> | <a href="www.linkedin.com/in/je-hyun-park">LinkedIn</a></p> 
 
 
 <h2>Announcements</h2>
