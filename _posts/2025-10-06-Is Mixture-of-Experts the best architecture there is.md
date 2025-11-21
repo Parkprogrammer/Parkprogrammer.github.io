@@ -273,5 +273,7 @@ A Neural Process, on the other had, could(or perhaps) avoid these optimization p
   <p style="text-align: center; color: #888; font-size: 14px; margin-top: 15px; margin-bottom: 0;">The Neural Process Family from yanndubs.github.io </p>
 </div>
 
+Will Come up with another post.. Focusing on **function-spaces**, **Singular-Learning-Theory** and **NTK** to **NNGPs** to find the next move.
+
 
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>  
