@@ -20,9 +20,9 @@ title: Jehyun Park
   <!-- <p class="subtitle"><em>Keep it simple, but not simpler</em></p> -->
 </div>
 
-**Currently in B.S majoring in Computer Science at [Sungkyunkwan University](https://www.skku.edu/). I am working on Optimizing Neural Networks and developing Generalization algorithms.**
+**Currently a Research Intern in [PI-Lab](https://pi.snu.ac.kr/) at [Seoul National University](https://en.snu.ac.kr/index.html). I am working on Optimizing Neural Networks and developing Generalization algorithms.**
 
-I've conducted research in **few-shot learning** and **model-compression**, focusing on solving **Out-Of-Distribution** problems and improving performance in **low-paramter situations**. Recently, i was a Research Assistant at **[ML/AI Lab](https://mlai.yonsei.ac.kr/home)** at **[Yonsei University](https://www.yonsei.ac.kr/sc/index.do)**.
+I've conducted research in **few-shot learning** and **model-compression**, focusing on solving **Out-Of-Distribution** problems and improving performance in **low-paramter situations**. <br/>**I've done my B.S in Computer Science at [Sungkyunkwan University](https://www.skku.edu/)**.
 
 My research aims to **develop foundation models** for **better generalization** through optimization and interpretibility. I am particularly interested in Surrogate-modeling, State-Space-modeling and Circuit base understanding of DNNs.
 
@@ -36,12 +36,12 @@ Always feel free to reach out to me with things you find exciting. Always open f
 <table>
   <tbody>
     <tr>
-      <td>Sep, 2025</td>
-      <td><strong>1st Place</strong> in the <em>2025 Samsung AI Challenge</em>. Competed <em><strong>individually</strong></em> and received Grand Prize Award for Optimizing Large Language Model. Awarded 7,500$</td>
+      <td>Dec, 2025</td>
+      <td>Joined <strong>PI-Lab</strong> at <strong>Seoul National University</strong> as a <strong>Research Intern</strong>, focusing on optimizing Transformers and solving Reasoning tasks in Vision-Language-Action Models.</td>
     </tr>
     <tr>
-      <td>Mar, 2025</td>
-      <td>Started working as an <strong>Research Assistant</strong> at ML/AI lab, focusing on solving Out-Of-Distribution problems and optimizing In-Context-Learning by merging task-vectors.</td>
+      <td>Sep, 2025</td>
+      <td><strong>1st Place</strong> in the <em>2025 Samsung AI Challenge</em>. Competed <em><strong>individually</strong></em> and received 1st Prize Award for Optimizing Large Language Model. Awarded 7,500$</td>
     </tr>
     <tr>
       <td>Feb, 2025</td>
