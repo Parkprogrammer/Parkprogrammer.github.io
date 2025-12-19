@@ -22,7 +22,7 @@ title: Jehyun Park
 
 **Currently a Research Intern in [PI-Lab](https://pi.snu.ac.kr/) at [Seoul National University](https://en.snu.ac.kr/index.html). I am working on Optimizing Neural Networks and developing Generalization algorithms.**
 
-I've conducted research in **few-shot learning** and **model-compression**, focusing on solving **Out-Of-Distribution** problems and improving performance in **low-paramter situations**. <br/>**I've done my B.S in Computer Science at [Sungkyunkwan University](https://www.skku.edu/)**.
+I've conducted research in **few-shot learning** and **model-compression**, focusing on solving **Out-Of-Distribution** problems and improving performance in **low-paramter situations**. <br/>**I am currently a B.S in Computer Science at [Sungkyunkwan University](https://www.skku.edu/)**.
 
 My research aims to **develop foundation models** for **better generalization** through optimization and interpretibility. I am particularly interested in Surrogate-modeling, State-Space-modeling and Circuit base understanding of DNNs.
 
