@@ -36,8 +36,12 @@ Always feel free to reach out to me with things you find exciting. Always open f
 <table>
   <tbody>
     <tr>
+      <td>Jan, 2026</td>
+      <td>Received <strong>Excellence Award</strong> in Undergraduate Paper Competition at <strong>KSC 2025</strong> as a <strong>Sole Author</strong> for the paper <em>Adaptation in Out-Of-Distribution via Sparse Autoencoders in Vision Transformers</em>.</td>
+    </tr>
+    <tr>
       <td>Dec, 2025</td>
-      <td>Joined <strong>PI-Lab</strong> at <strong>Seoul National University</strong> as a <strong>Research Intern</strong>, focusing on optimizing Transformers and solving Reasoning tasks in Vision-Language-Action Models.</td>
+      <td>Joined <strong>PI-Lab</strong> at <strong>Seoul National University</strong> as a <strong>Research Intern</strong>, focusing on optimizing Transformer architecture and solving Reasoning tasks in Vision-Language-Action Models.</td>
     </tr>
     <tr>
       <td>Sep, 2025</td>
