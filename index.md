@@ -24,7 +24,7 @@ title: Jehyun Park
 
 I've conducted research in **few-shot learning** and **model-compression**, focusing on solving **Out-Of-Distribution** problems and improving performance in **low-paramter situations**. <br/>**I am currently a B.S in Computer Science at [Sungkyunkwan University](https://www.skku.edu/)**.
 
-My research aims to **develop foundation models** for **better generalization** through optimization and interpretibility. I am particularly interested in Surrogate-modeling, State-Space-modeling and Circuit base understanding of DNNs.
+My research aims to **develop foundation models** for **better generalization** through optimization and interpretibility. I am particularly interested in Offline-RL, State-Space-modeling and Circuit base understanding of DNNs.
 
 Always feel free to reach out to me with things you find exciting. Always open for new ideas :)
 
