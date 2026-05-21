@@ -64,7 +64,7 @@ Always feel free to reach out to me with things you find exciting. Always open f
   <img class="publication-thumb publication-thumb--placeholder" src="/assets/images/Publications/noImage.jpg" alt="MUART: Mobile-Use Agent Red-Teaming Framework" />
   <div class="publication-body">
     <p class="publication-title">MUART: Mobile-Use Agent Red-Teaming Framework</p>
-    <p class="publication-authors">***, <strong>Jehyun Park</strong>, ***, ***, ***, ***, ***</p>
+    <p class="publication-authors"><span class="hidden-author" style="width:4em"></span> <strong>Jehyun Park</strong> <span class="hidden-author" style="width:5em"></span> <span class="hidden-author" style="width:3.5em"></span> <span class="hidden-author" style="width:5.5em"></span> <span class="hidden-author" style="width:3.5em"></span> <span class="hidden-author" style="width:4.5em"></span></p>
     <p class="publication-venue"><em>Under review</em></p>
   </div>
 </div>

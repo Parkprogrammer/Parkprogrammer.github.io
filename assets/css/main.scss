@@ -216,6 +216,16 @@ main ul li a {
   color: #333;
 }
 
+.hidden-author {
+  display: inline-block;
+  height: 0.7em;
+  margin: 0 0.15em;
+  background: #d9d9d9;
+  border-radius: 3px;
+  vertical-align: middle;
+  user-select: none;
+}
+
 .publication-venue {
   color: #444;
 }
