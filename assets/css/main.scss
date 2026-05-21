@@ -169,3 +169,47 @@ main ul li {
 main ul li a {
   margin-left: 1em;
 }
+
+// 논문 목록
+.publication {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  align-items: flex-start;
+  margin: 1.5em 0 2em 0;
+}
+
+.publication-thumb {
+  width: 320px;
+  max-width: 100%;
+  flex-shrink: 0;
+}
+
+.publication-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.publication-body p {
+  margin: 0 0 0.4em 0;
+  text-align: left;
+}
+
+.publication-date {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.publication-title {
+  font-size: 1.15em;
+  font-weight: 600;
+  color: #0b5cad;
+}
+
+.publication-authors {
+  color: #333;
+}
+
+.publication-venue {
+  color: #444;
+}

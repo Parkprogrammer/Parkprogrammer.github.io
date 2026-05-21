@@ -60,7 +60,14 @@ Always feel free to reach out to me with things you find exciting. Always open f
 
 ## Selected Papers
 
-(Coming soon...)
+<div class="publication">
+  <img class="publication-thumb" src="/assets/images/Publications/self-improving-cad.png" alt="Self-Improving CAD Generation Agents with Finite Element Analysis as Feedback" />
+  <div class="publication-body">
+    <p class="publication-title">Self-Improving CAD Generation Agents with Finite Element Analysis as Feedback</p>
+    <p class="publication-authors">Guijin Son, <strong>Jehyun Park</strong>, Seyeon Park, Sunghee Ahn, Youngjae Yu</p>
+    <p class="publication-venue"><em><a href="https://arxiv.org/abs/2605.17448">Preprint</a></em></p>
+  </div>
+</div>
 
 <footer>
   <hr>
