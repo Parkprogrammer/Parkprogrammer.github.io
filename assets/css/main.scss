@@ -176,7 +176,7 @@ main ul li a {
   flex-wrap: wrap;
   gap: 1.5em;
   align-items: flex-start;
-  margin: 1.5em 0 2em 0;
+  margin: 1.4em 0;
 }
 
 .publication-thumb {
@@ -191,7 +191,8 @@ main ul li a {
 }
 
 .publication-body p {
-  margin: 0 0 0.4em 0;
+  margin: 0 0 0.22em 0;
+  line-height: 1.4;
   text-align: left;
 }
 
@@ -201,7 +202,7 @@ main ul li a {
 }
 
 .publication-title {
-  font-size: 1.15em;
+  font-size: 1.05em;
   font-weight: 600;
   color: #0b5cad;
 }
@@ -212,4 +213,10 @@ main ul li a {
 
 .publication-venue {
   color: #444;
+}
+
+.publication-links a {
+  margin-right: 0.9em;
+  font-size: 0.95em;
+  text-decoration: underline;
 }

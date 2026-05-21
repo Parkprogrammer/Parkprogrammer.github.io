@@ -64,8 +64,19 @@ Always feel free to reach out to me with things you find exciting. Always open f
   <img class="publication-thumb" src="/assets/images/Publications/self-improving-cad.png" alt="Self-Improving CAD Generation Agents with Finite Element Analysis as Feedback" />
   <div class="publication-body">
     <p class="publication-title">Self-Improving CAD Generation Agents with Finite Element Analysis as Feedback</p>
-    <p class="publication-authors">Guijin Son, <strong>Jehyun Park</strong>, Seyeon Park, Sunghee Ahn, Youngjae Yu</p>
-    <p class="publication-venue"><em><a href="https://arxiv.org/abs/2605.17448">Preprint</a></em></p>
+    <p class="publication-authors">Guijin Son<sup>&dagger;</sup>, <strong>Jehyun Park<sup>&dagger;</sup></strong>, Seyeon Park, Sunghee Ahn, Youngjae Yu</p>
+    <p class="publication-venue"><em>Under review</em></p>
+    <p class="publication-links"><a href="https://arxiv.org/abs/2605.17448">Preprint</a></p>
+  </div>
+</div>
+
+<div class="publication">
+  <img class="publication-thumb" src="/assets/images/Publications/adaptation-ood-sae-vit.png" alt="Adaptation in Out-Of-Distribution via Sparse Autoencoders in Vision Transformers" />
+  <div class="publication-body">
+    <p class="publication-title">Adaptation in Out-Of-Distribution via Sparse Autoencoders in Vision Transformers</p>
+    <p class="publication-authors"><strong>Je Hyun Park*</strong></p>
+    <p class="publication-venue"><em>KSC 2025</em></p>
+    <p class="publication-links"><a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12577962">paper</a></p>
   </div>
 </div>
 
