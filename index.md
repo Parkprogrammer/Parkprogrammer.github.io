@@ -61,6 +61,15 @@ Always feel free to reach out to me with things you find exciting. Always open f
 ## Selected Papers
 
 <div class="publication">
+  <img class="publication-thumb publication-thumb--placeholder" src="/assets/images/Publications/noImage.jpg" alt="MUART: Mobile-Use Agent Red-Teaming Framework" />
+  <div class="publication-body">
+    <p class="publication-title">MUART: Mobile-Use Agent Red-Teaming Framework</p>
+    <p class="publication-authors">***, <strong>Jehyun Park</strong>, ***, ***, ***, ***, ***</p>
+    <p class="publication-venue"><em>Under review</em></p>
+  </div>
+</div>
+
+<div class="publication">
   <img class="publication-thumb" src="/assets/images/Publications/self-improving-cad.png" alt="Self-Improving CAD Generation Agents with Finite Element Analysis as Feedback" />
   <div class="publication-body">
     <p class="publication-title">Self-Improving CAD Generation Agents with Finite Element Analysis as Feedback</p>
@@ -76,7 +85,7 @@ Always feel free to reach out to me with things you find exciting. Always open f
     <p class="publication-title">Adaptation in Out-Of-Distribution via Sparse Autoencoders in Vision Transformers</p>
     <p class="publication-authors"><strong>Je Hyun Park*</strong></p>
     <p class="publication-venue"><em>KSC 2025</em></p>
-    <p class="publication-links"><a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12577962">paper</a></p>
+    <p class="publication-links"><a href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12577962">Paper</a></p>
   </div>
 </div>
 

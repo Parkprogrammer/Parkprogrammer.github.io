@@ -185,6 +185,11 @@ main ul li a {
   flex-shrink: 0;
 }
 
+.publication-thumb--placeholder {
+  height: 110px;
+  object-fit: cover;
+}
+
 .publication-body {
   flex: 1;
   min-width: 0;
@@ -218,5 +223,6 @@ main ul li a {
 .publication-links a {
   margin-right: 0.9em;
   font-size: 0.95em;
+  font-weight: 600;
   text-decoration: underline;
 }
