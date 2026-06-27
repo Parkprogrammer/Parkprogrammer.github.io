@@ -20,11 +20,11 @@ title: Jehyun Park
   <!-- <p class="subtitle"><em>Keep it simple, but not simpler</em></p> -->
 </div>
 
-**Currently a Research Intern in [PI-Lab](https://pi.snu.ac.kr/) at [Seoul National University](https://en.snu.ac.kr/index.html). I am working on Optimizing Neural Networks and developing Generalization algorithms.**
+**Currently a Research Assistant in [PI-Lab](https://pi.snu.ac.kr/) at [Seoul National University](https://en.snu.ac.kr/index.html). I am working on Optimizing Test-Time-Compute and Reinforcement Learning Algorithms for Physical AI and AI4Science.**
 
-I've conducted research in **few-shot learning** and **model-compression**, focusing on solving **Out-Of-Distribution** problems and improving performance in **low-paramter situations**. <br/>**I am currently a B.S in Computer Science at [Sungkyunkwan University](https://www.skku.edu/)**.
+I've conducted research in **few-shot learning** and **model-compression**, focusing on solving **Out-Of-Distribution** problems and improving performance in **low-paramter situations**. <br/>**I've done my B.S in Computer Science at [Sungkyunkwan University](https://www.skku.edu/)**.
 
-My research aims to **develop foundation models** for **better generalization** through optimization and interpretibility. I am particularly interested in Offline-RL, State-Space-modeling and Circuit base understanding of DNNs.
+My research aims to **develop foundation models** for **better generalization** through optimization. I am particularly interested in Offline-RL, Transductive-Learning, Physical Simulations.
 
 Always feel free to reach out to me with things you find exciting. Always open for new ideas :)
 
