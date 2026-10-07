@@ -45,6 +45,8 @@ Now maybe we should abandon inductive-bias.
 
 ## Making a Search Engine for AI(not RAG), but make it faster once again.
 
+<br/>
+
 <div style="max-width: 900px; margin: 0 auto;">
   <div style="display: flex; gap: 16px; align-items: flex-start; justify-content: center; flex-wrap: wrap;">
     <div style="flex: 121 1 0; min-width: 260px;">
