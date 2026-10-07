@@ -41,6 +41,8 @@ But after the astonishing success, there seemed to be a never-ending stop toward
 
 Now maybe we should abandon inductive-bias.
 
+<br/>
+
 ## Making a Search Engine for AI(not RAG), but make it faster once again.
 
 <div style="max-width: 900px; margin: 0 auto;">
