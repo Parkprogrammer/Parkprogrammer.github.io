@@ -16,51 +16,46 @@ date: 2026-10-06
 <br/>
 
 <div style="text-align: center;">
-  <img src="/assets/images/posts/bitter_lesson_1.png" alt="The bitter lesson" style="max-width: 70%; height: auto; display: block; margin: 0 auto;">
-  <p style="text-align: center; color: #888; font-size: 14px; margin-top: 5px; margin-bottom: 0;">From Lance's Blog</p>
+  <img src="/assets/images/posts/bitter_lesson_crossover.png" alt="Where structure stops winning: language has passed the crossover, AI4Science has not" style="max-width: 92%; height: auto; display: block; margin: 0 auto;">
+  <p style="text-align: center; color: #888; font-size: 14px; margin-top: 5px; margin-bottom: 0;">Adapted from Lance's Blog. Compression here means how much data a model folds into its weights.</p>
 </div>
 
 *"The biggest lesson that can be read from 70 years of AI research is that general methods that leverage computation are ultimately the most effective, and by a large margin. The ultimate reason for this is Moore's law, or rather its generalization of continued exponentially falling cost per unit of computation." - Richard Sutton* 
 
-For years, after diving into the field of AI and trying to optimize the models into somewhat *General-like(e.g Gaussian Process, Bayesian Inference, SLMs)* the ego-inflation became massive with no actual progress. Papers and Companies argue why some architecture should be awsome (e.g JEPA) and a road to AGI.
+Scaling law, Bitter lesson both point toward the same point. The more data being compressed into the weights, the better the model becomes at being able to extrapolate to new data. Moreover, language modeling has shown that transductive inference emerges when *a) enough data is shown* and *b) the model becomes able at doing MCMC in gradient fields*.
 
-But, we fall into the same hole once again. As Geoffrey Hinton said in his latest interview, we don't know why these machines actually work. Every model should fall into a *local-minima*, and cannot go beyond the *bias-variance tradeoff*. But, attention and residual networks goes through every breakthrough.
+But can *a)* and *b)* hold in other domains, particulary in domains that has no limit in it's information bound? (ex. CFD/FEM, Proteins, Physical Design) AlphaGo, AlphaFold and MuZero show that the path holds promise, but the question remains unproven whether this kind of success could be achieved in areas where data has not been fully opened yet.
 
-## Just Transformers? - Make it search through it's program, parameter, posterior .... space
+This post will look over the computational complexity of these data, think about how to reduce the time and cost for collecting enough data for achieving scaling laws in AI4Science.
+
+## Synthetic Data? Or Simulated Data (Solver-based)
 
 <br/>
 
 <div style="text-align: center;">
-  <img src="/assets/images/posts/bitter_lesson_2.jpeg" alt="이미지 설명" style="max-width: 50%; height: auto; display: block; margin: 0 auto;">
-  <p style="text-align: center; color: #888; font-size: 14px; margin-top: 5px; margin-bottom: 0;">yann lecun's talk</p>
+  <img src="/assets/images/posts/bitter_lesson_data_kinds.png" alt="Original, synthetic and simulated data compared" style="max-width: 95%; height: auto; display: block; margin: 0 auto;">
+  <p style="text-align: center; color: #888; font-size: 14px; margin-top: 5px; margin-bottom: 0;">Synthetic data is fitted to the original, so it inherits the same blind spots. A solver is bound by neither.</p>
 </div>
 
-*Anti-LLM researchers* usually argure about two things. 1) LLM's need too much information(data) to learn and 2) LLM's cannot search. But in my opinion both are wrong. The metaphor between LLM and a child miss the information density, and the searchability of LLM in Chain-of-Thought is 100% true(which will be discussed in another post). The emergent capability of LLMs never seems to stop.
+Traditional data augmentation methods - *SMOTE, ADASYN* and *Mixup* in machine learning, *random cropping* and *horizontal flipping* in computer vision - are a fixed family of transformations $f_1, \dots, f_k$ chosen in advance. Applied to a dataset $D = \lbrace x_1, \dots, x_N \rbrace$, they yield  $kN$ points, which lies in $\bigcup_{j=1}^{k} f_j(D)$ - a set already determined by the original data and the $k$ functions picked in advance. **The dataset grows by a constant factor, but its support does not.**
 
-But after the astonishing success, there seemed to be a never-ending stop towards this machine's capability. Spatial Reasoning, millennial math problems, Robotic manipulation, Machanical Engineering ... It was glorious at first, but came as a disaster to what we humans should do in this *Super-Intelligence-ish* machine.
+The bottleneck in this setting is that $f_1, \dots f_k$ is a **Hand-designed structure**, which introduces bias, going against the bitter-lesson which could lead to failure in Scaling. So the simple answer is make $f_\theta(x)$ ? Many Agentic Harness based synthetic data generation solves this via long chain-of-thought. The semantic power of LLMs enable them to make various functions, and by all means, may enable going beyond the bias of the original data if prompted to a right way.
 
-Now maybe we should abandon inductive-bias.
+<!-- But although Harness are compositional generalizers(dynamic $f_\theta$), a harness can only reach $\lbrace p_\theta(\cdot \mid D) : \theta \in \Theta \rbrace$, so $\inf_{\theta \in \Theta} \lVert p_\theta(\cdot \mid D) - p^\ast \rVert = \varepsilon > 0$ however many samples we draw. A solver does not approximate $p^\ast$ but evaluates the equations that define it, so its error is numerical.
 
-<br/>
+However dynamic $f_\theta$ is, it builds everything from $D$: $I(\hat{D}; Y) \le I(D; Y)$, so no prompt adds information about the system $Y$ that $D$ never had. A solver escapes only by starting from the equations instead of $D$. -->
 
-## Making a Search Engine for AI(not RAG), but make it faster once again.
 
-<br/>
-
-<div style="max-width: 900px; margin: 0 auto;">
-  <div style="display: flex; gap: 16px; align-items: flex-start; justify-content: center; flex-wrap: wrap;">
-    <div style="flex: 121 1 0; min-width: 260px;">
-      <img src="/assets/images/posts/bitter_lesson_3.png" alt="François Chollet on base LLMs vs. LRMs" style="width: 100%; height: auto; display: block;">
-    </div>
-    <div style="flex: 168 1 0; min-width: 260px;">
-      <img src="/assets/images/posts/bitter_lesson_4.png" alt="AI Learning to Play Chess leaderboard" style="width: 100%; height: auto; display: block;">
-    </div>
-  </div>
-  <p style="text-align: center; color: #888; font-size: 14px; margin-top: 8px; margin-bottom: 0;">From François Chollet (@fchollet), Oct 2, 2026</p>
+<div style="text-align: center; margin: 1.6em 0;">
+  $$I(\hat{D}; Y) \le I(D, C; Y)$$
+  <p style="text-align: center; color: #888; font-size: 14px; margin-top: 5px; margin-bottom: 0;">$Y$ the field, $D$ our data, $C$ the training corpus, $\hat{D}$ what the harness generates.</p>
 </div>
 
-The inductive <-> transductive transition made searching at test-time more important. How can we design a search-space more suitable for AI?
+But there lies a heavy assumption behind this dynamic $f_\theta$ via compositional generalizers(harness). Are these system capable of creating data where there is absolutely $0$ informaion about the field? Can LLMs make self-play-ish data? Or is it just a heavy computed version of the original data. And more importantly, can we distinguish between these two?
 
+As we don't know for sure yet, we use solvers. The information gap reduces since agentic harness has a inference formula of $p_\theta(\cdot \mid D, C)$, and a solver has a approximation formula of $\hat{D} = f(Y, u)$, which eliminates the output space being restricted to both $D$ and $C$. But we should be careful since solvers are actually **Human-designed-formulars**. Or is it?
+
+## But what is a solver anyway?
 
 
 
