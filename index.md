@@ -91,7 +91,6 @@ Always feel free to reach out to me with things you find exciting. Always open f
   <div class="publication-body">
     <p class="publication-title">Self-Improving CAD Generation Agents with Finite Element Analysis as Feedback</p>
     <p class="publication-authors">Guijin Son<sup>&dagger;</sup>, <strong>Jehyun Park<sup>&dagger;</sup></strong>, Seyeon Park, Sunghee Ahn, Youngjae Yu</p>
-    <p class="publication-venue"><em>Under review</em></p>
     <p class="publication-links"><a href="https://arxiv.org/abs/2605.17448">Preprint</a></p>
   </div>
 </div>
