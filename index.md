@@ -6,7 +6,6 @@ title: Jehyun Park
 <nav>
   <a href="/">Home</a>
   <a href="/blog/">Blog</a>
-  <a href="/publications/">Publications</a>
   <a href="/assets/files/CV_PJH.pdf">CV</a>
 </nav>
 
@@ -61,27 +60,27 @@ Always feel free to reach out to me with things you find exciting. Always open f
 ## Selected Papers
 
 <div class="publication">
-  <img class="publication-thumb publication-thumb--placeholder" src="/assets/images/Publications/noImage.jpg" alt="Learning to Transfer Mechanics from Simulation to 3D Generation via Image and Text" />
+  <img class="publication-thumb publication-thumb--placeholder" src="/assets/images/Publications/noImage.jpg" alt="Paper under review" />
   <div class="publication-body">
-    <p class="publication-title">Learning to Transfer Mechanics from Simulation to 3D Generation via Image and Text</p>
+    <p class="publication-title publication-title--withheld">Title withheld during review</p>
     <p class="publication-authors"><strong>Jehyun Park</strong> <span class="hidden-author" style="width:5em"></span> <span class="hidden-author" style="width:4.5em"></span> <span class="hidden-author" style="width:4em"></span> <span class="hidden-author" style="width:4.5em"></span> <span class="hidden-author" style="width:4.5em"></span></p>
     <p class="publication-venue"><em>Under review</em></p>
   </div>
 </div>
 
 <div class="publication">
-  <img class="publication-thumb publication-thumb--placeholder" src="/assets/images/Publications/noImage.jpg" alt="ActionDiT: Action Dynamics Pretraining for Data-Efficient Robot Adaptation" />
+  <img class="publication-thumb publication-thumb--placeholder" src="/assets/images/Publications/noImage.jpg" alt="Paper under review" />
   <div class="publication-body">
-    <p class="publication-title">ActionDiT: Action Dynamics Pretraining for Data-Efficient Robot Adaptation</p>
+    <p class="publication-title publication-title--withheld">Title withheld during review</p>
     <p class="publication-authors"><span class="hidden-author" style="width:5em"></span> <span class="hidden-author" style="width:3.5em"></span> <span class="hidden-author" style="width:3.5em"></span> <strong>Jehyun Park</strong> <span class="hidden-author" style="width:5em"></span> <span class="hidden-author" style="width:4.5em"></span> <span class="hidden-author" style="width:5.5em"></span> <span class="hidden-author" style="width:5.5em"></span> <span class="hidden-author" style="width:4.5em"></span></p>
     <p class="publication-venue"><em>Under review</em></p>
   </div>
 </div>
 
 <div class="publication">
-  <img class="publication-thumb publication-thumb--placeholder" src="/assets/images/Publications/noImage.jpg" alt="MUART: Mobile-Use Agent Red-Teaming Framework" />
+  <img class="publication-thumb publication-thumb--placeholder" src="/assets/images/Publications/noImage.jpg" alt="Paper under review" />
   <div class="publication-body">
-    <p class="publication-title">MUART: Mobile-Use Agent Red-Teaming Framework</p>
+    <p class="publication-title publication-title--withheld">Title withheld during review</p>
     <p class="publication-authors"><span class="hidden-author" style="width:4em"></span> <strong>Jehyun Park</strong> <span class="hidden-author" style="width:5em"></span> <span class="hidden-author" style="width:3.5em"></span> <span class="hidden-author" style="width:5.5em"></span> <span class="hidden-author" style="width:3.5em"></span> <span class="hidden-author" style="width:4.5em"></span></p>
     <p class="publication-venue"><em>Under review</em></p>
   </div>

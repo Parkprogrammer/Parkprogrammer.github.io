@@ -7,7 +7,6 @@ date: 2026-10-06
 <nav>
   <a href="/">Home</a>
   <a href="/blog/">Blog</a>
-  <a href="/publications/">Publications</a>
   <a href="/assets/files/CV_PJH.pdf">CV</a>
 </nav>  
 
@@ -56,6 +55,10 @@ But there lies a heavy assumption behind this dynamic $f_\theta$ via composition
 As we don't know for sure yet, we use solvers. The information gap reduces since agentic harness has a inference formula of $p_\theta(\cdot \mid D, C)$, and a solver has a approximation formula of $\hat{D} = f(Y, u)$, which eliminates the output space being restricted to both $D$ and $C$. But we should be careful since solvers are actually **Human-designed-formulars**. Or is it?
 
 ## But what is a solver anyway?
+
+### Equilibrium solvers
+
+### Dynamic solvers
 
 
 

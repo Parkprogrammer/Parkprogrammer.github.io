@@ -226,6 +226,13 @@ main ul li a {
   user-select: none;
 }
 
+.publication-title--withheld {
+  font-weight: 500;
+  font-style: italic;
+  color: #9a9a9a;
+  user-select: none;
+}
+
 .publication-venue {
   color: #444;
 }
